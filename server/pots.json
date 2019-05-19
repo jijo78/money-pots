@@ -1,0 +1,22 @@
+[
+  {
+    "name": "My Nutmeg pot",
+    "value": "4420",
+    "isWithdrawable": "true"
+  },
+  {
+    "name": "My Summer Holiday pot",
+    "value": "332",
+    "isWithdrawable": "true"
+  },
+  {
+    "name": "My Lifetime ISA",
+    "value": "80010",
+    "isWithdrawable": "true"
+  },
+  {
+    "name": "My Empty pot",
+    "value": "0",
+    "isWithdrawable": "false"
+  }
+]
