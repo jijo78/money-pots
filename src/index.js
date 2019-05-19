@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './alert.css';
 import './button.css';
 import './form.css';
+import './index.css';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';

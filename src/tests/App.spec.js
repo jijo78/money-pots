@@ -44,11 +44,24 @@ describe('<App />', () => {
         wrapper.setState({ successfullWithdraw: true });
 
         expect(wrapper.find('.nk-visually-hidden').length).toEqual(1);
-        expect(wrapper.find('.nk-text--color-success').length).toEqual(1);
+        expect(wrapper.find('.pick-pot-form__alert--success').length).toEqual(1);
         expect(wrapper.state().successfullWithdraw).toEqual(true);
       });
 
       it('reset error message on on successfull submit', () => {
+        wrapper.setState({
+          availablePots: potsAll,
+          checked: true,
+          successfullWithdraw: true,
+          error: ' Some error'
+        });
+
+        wrapper.find('.pick-pot-form').simulate('submit', onSubmitMock);
+
+        expect(wrapper.state().error).toEqual('');
+      });
+
+      it('shows error message on on unsuccessfull submit', () => {
         wrapper.setState({
           availablePots: potsAll,
           checked: true,
@@ -79,17 +92,18 @@ describe('<App />', () => {
 
         wrapper.find('.pick-pot-form').simulate('submit', onSubmitMock);
 
-        expect(wrapper.find('.nk-text--color-error').length).toEqual(1);
+        expect(wrapper.find('.pick-pot-form__alert--error').length).toEqual(1);
         expect(wrapper.state().error).toEqual('Please make sure you choose at least one pot.');
       });
 
-      it('sets state.value to target.dataset.id if radio button is checked', () => {
+      it('sets state.value to evt.target.dataset.id if radio button is checked', () => {
         wrapper.setState({ availablePots: potsAll, value: '' });
 
         wrapper
           .find('.pick-pot-form__radio')
           .first()
           .simulate('change', { dataset: { id: 'Account name' } });
+        wrapper.setState({ availablePots: potsAll, value: 'Account name' });
 
         expect(wrapper.state().value).toEqual('Account name');
       });

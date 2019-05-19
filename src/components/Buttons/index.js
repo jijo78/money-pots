@@ -6,11 +6,6 @@ const submitButton = () => {
       <button type='button' className='btn'>
         Back
       </button>
-      <div className='nk-header__left-item'>
-        <a href='/' title='Back'>
-          <span>Back</span>
-        </a>
-      </div>
       <button type='submit' className='btn btn--success pick-pot-form__cta-submit'>
         Next
       </button>

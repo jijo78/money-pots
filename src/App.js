@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import FormHeader from './components/FormHeader';
 import FormBody from './components/FormBody';
-import Error from './components/Error';
+import Alert from './components/Alert';
 
 class App extends Component {
   constructor(props) {
@@ -78,11 +78,9 @@ class App extends Component {
             <p>Sorry not pots available at the moment</p>
           )}
 
-          {error !== '' ? <Error msg={error} /> : null}
+          {error !== '' ? <Alert msg={error} type={'error'} /> : null}
           {successfullWithdraw ? (
-            <p className='nk-text--color-success'>
-              You have succesfully withdrawn from {value} account
-            </p>
+            <Alert msg={`You have succesfully withdrawn from ${value} account`} type={'success'} />
           ) : null}
         </section>
       </div>

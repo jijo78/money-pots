@@ -1,0 +1,13 @@
+.pick-pot-form__alert {
+  position: relative;
+}
+
+.pick-pot-form__alert--error {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.pick-pot-form__alert--success {
+  color: #2fb153;
+  font-weight: bold;
+}
