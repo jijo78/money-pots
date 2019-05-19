@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './alert.css';
-import './button.css';
-import './form.css';
+import '../src/components/Alert/alert.css';
+import '../src/components/Buttons/button.css';
+import '../src/components/FormBody/form.css';
 import './index.css';
 
 import App from './App';

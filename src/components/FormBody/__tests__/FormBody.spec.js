@@ -1,9 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import FormBody from '../components/FormBody';
-import pots from './fixtures/pots.all.json';
-
-import '../setupTests';
+import FormBody from '../index';
+import pots from '../../../tests/fixtures/pots.all.json';
+import '../../../setupTests';
 
 let wrapper;
 describe('<Buttons />', () => {

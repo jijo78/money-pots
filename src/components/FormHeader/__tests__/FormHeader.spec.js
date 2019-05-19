@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import FormHeader from '../components/FormHeader';
-import '../setupTests';
+import FormHeader from '../index';
+import '../../../setupTests';
 
 let wrapper;
 describe('<FormHeader />', () => {
