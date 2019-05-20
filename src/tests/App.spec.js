@@ -48,7 +48,7 @@ describe('<App />', () => {
         expect(wrapper.state().successfullWithdraw).toEqual(true);
       });
 
-      it('reset error message on on successfull submit', () => {
+      it('reset state.error message and does not show error message on successfull submit', () => {
         wrapper.setState({
           availablePots: potsAll,
           checked: true,
@@ -59,19 +59,19 @@ describe('<App />', () => {
         wrapper.find('.pick-pot-form').simulate('submit', onSubmitMock);
 
         expect(wrapper.state().error).toEqual('');
+        expect(wrapper.find('.pick-pot-form__alert--error').length).toEqual(0);
       });
 
-      it('shows error message on on unsuccessfull submit', () => {
+      it('shows error message on unsuccessfull submit', () => {
         wrapper.setState({
           availablePots: potsAll,
-          checked: true,
-          successfullWithdraw: true,
-          error: ' Some error'
+          checked: false,
+          successfullWithdraw: false
         });
 
         wrapper.find('.pick-pot-form').simulate('submit', onSubmitMock);
 
-        expect(wrapper.state().error).toEqual('');
+        expect(wrapper.find('.pick-pot-form__alert--error').length).toEqual(1);
       });
     });
 
