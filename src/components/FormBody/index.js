@@ -28,7 +28,8 @@ const FormBody = ({ pots, onChange }) => {
                       className='pick-pot-form__radio'
                       type='radio'
                       data-id={pot.name}
-                      name={pot.name}
+                      id={pot.name}
+                      name='pot-available'
                       onChange={onChange}
                     />
                     <span />
