@@ -6,18 +6,18 @@ import '../../../setupTests';
 let wrapper;
 describe('<Alert />', () => {
   beforeEach(() => {
-    wrapper = shallow(<Alert />);
+    wrapper = shallow(<Alert msg='Alert message' />);
   });
 
-  afterEach(() => {
+  afterAll(() => {
     wrapper.unmount();
   });
   describe('<Alert /> msg prop', () => {
     it('renders the Alert component if msg is passed as a prop', () => {
-      wrapper = shallow(<Alert msg='Alert message' />);
       expect(wrapper.find('.pick-pot-form__alert').length).toEqual(1);
     });
     it('does not render the Alert component if msg is not passed as a prop', () => {
+      wrapper = shallow(<Alert />);
       expect(wrapper.find('.pick-pot-form__alert').length).toEqual(0);
     });
   });
@@ -28,7 +28,6 @@ describe('<Alert />', () => {
       expect(wrapper.find('.pick-pot-form__alert--error').length).toEqual(1);
     });
     it('renders the default class type if type props is not present', () => {
-      wrapper = shallow(<Alert msg='Alert message' />);
       expect(wrapper.find('.pick-pot-form__alert--success').length).toEqual(1);
     });
   });
