@@ -21,6 +21,7 @@ describe('<Alert />', () => {
       expect(wrapper.find('.pick-pot-form__alert').length).toEqual(0);
     });
   });
+
   describe('<Alert /> type prop', () => {
     it('renders the class type if type props is present', () => {
       wrapper = shallow(<Alert msg='Alert message' type='error' />);
