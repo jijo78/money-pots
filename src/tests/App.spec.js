@@ -48,7 +48,7 @@ describe('<App />', () => {
         expect(wrapper.state().successfullWithdraw).toEqual(true);
       });
 
-      it('reset state.error message and does not show error message on successfull submit', () => {
+      it('reset state.error and does not show error message on successfull submit', () => {
         wrapper.setState({
           availablePots: potsAll,
           checked: true,
