@@ -5,7 +5,7 @@ import FormBody from './components/FormBody';
 import Alert from './components/Alert';
 
 class App extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       availablePots: [],
