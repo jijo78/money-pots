@@ -5,7 +5,7 @@
   "dependencies": {
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
